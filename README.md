@@ -13,9 +13,9 @@ module ns-demo {
 ## Run
 Make sure to run these commands to initialize and create the module.
 
-```console
-$ terraform init
-$ terraform apply
+```bash
+terraform init
+terraform apply
 ```
 
 ## Pod limit
@@ -24,5 +24,5 @@ Namespaces created by this module are capped at 100 pods (`max_pods` var, change
 ## Outputs
 | Name | Description |
 |------|-------------|
-| name | name of the created namespace |
-| max_pods | pod limit enforced on the namespace |
+| `name` | name of the created namespace |
+| `max_pods` | pod limit enforced on the namespace |
