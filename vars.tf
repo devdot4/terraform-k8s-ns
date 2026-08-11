@@ -19,3 +19,9 @@ variable "annotations" {
     mylabel = "label-value"
   }
 }
+
+variable "max_pods" {
+  description = "maximum number of pods allowed in the namespace"
+  type        = number
+  default     = 100
+}
