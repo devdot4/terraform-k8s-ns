@@ -5,5 +5,5 @@ output "name" {
 
 output "max_pods" {
   description = "pod limit enforced on the namespace"
-  value       = kubernetes_resource_quota_v1.pod_limit.spec[0].hard.pods
+  value       = kubernetes_resource_quota_v1.this.spec[0].hard.pods
 }

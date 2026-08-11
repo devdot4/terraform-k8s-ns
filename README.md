@@ -9,6 +9,8 @@ module ns-demo {
     max_pods    = 100
 }
 ```
+## Pod limit
+Namespaces created by this module are capped at 100 pods (`max_pods` var, change it if you need a different number). It's just a `ResourceQuota` under the hood, so k8s handles the rejecting once you hit the cap.
 
 ## Run
 Make sure to run these commands to initialize and create the module.
@@ -17,9 +19,6 @@ Make sure to run these commands to initialize and create the module.
 terraform init
 terraform apply
 ```
-
-## Pod limit
-Namespaces created by this module are capped at 100 pods (`max_pods` var, change it if you need a different number). It's just a `ResourceQuota` under the hood, so k8s handles the rejecting once you hit the cap.
 
 ## Outputs
 | Name | Description |
