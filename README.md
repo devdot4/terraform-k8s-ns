@@ -13,9 +13,9 @@ module ns-demo {
 ## Run
 Make sure to run these commands to initialize and create the module.
 
-```bash
-terraform init
-terraform apply
+```console
+$ terraform init
+$ terraform apply
 ```
 
 ## Pod limit
