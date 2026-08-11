@@ -26,6 +26,4 @@ terraform apply
 
 ## Pod limit
 
-Every namespace created by this module gets a `ResourceQuota` capping the number of pods that can run in it. The limit defaults to **100 pods** via the `max_pods` variable — override it per-namespace if a different limit is needed.
-
-Once a namespace hits its pod limit, Kubernetes itself rejects any further pod creation attempts (via kubectl, a Deployment, a CI pipeline, etc.) with a quota-exceeded error — no extra tooling required.
+Namespaces created by this module are capped at 100 pods (`max_pods` var, change it if you need a different number). It's just a `ResourceQuota` under the hood, so k8s handles the rejecting once you hit the cap.
